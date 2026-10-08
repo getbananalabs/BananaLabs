@@ -11,6 +11,7 @@
     {
       "name": "bananamigrator",
       "source": "./plugins/bananamigrator",
+      "displayName": "BananaMigrator.",
       "description": "Move a site off Framer onto your own hosting: an exact copy, the project source, 13 checks that the copy matches the original, form flows, snapshots and change reports. Skill /bananamigrator:migrate.",
       "category": "web migration",
       "tags": [

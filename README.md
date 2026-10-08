@@ -64,3 +64,7 @@ Auto-update is off by default for a marketplace you added yourself. Turn it
 on under **Marketplaces** in `/plugin`, or run
 `claude plugin update bananamigrator@bananalabs` when you want the latest
 version.
+
+## License
+
+MIT. See `LICENSE`.
