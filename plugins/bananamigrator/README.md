@@ -1,3 +1,5 @@
+![BananaMigrator. – Move a site off Framer: exact copy, source, machine-verified.](./hero.png)
+
 ```
         ██████╗  █████╗ ███╗   ██╗ █████╗ ███╗   ██╗ █████╗
         ██╔══██╗██╔══██╗████╗  ██║██╔══██╗████╗  ██║██╔══██╗

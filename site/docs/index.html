@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BananaMigrator. documentation</title>
+<meta name="description" content="Move a site off Framer: exact copy, source, machine-verified. The short version of the BananaMigrator. documentation.">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Geist+Mono:wght@400&family=Instrument+Serif:ital@1&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../docs/"><img src="../assets/logo.svg" alt="" width="28" height="28"><span><span class="b">Banana</span>Migrator<span class="dot">.</span></span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="../docs/" aria-current="page">Docs</a>
+      <a href="../support/">Support</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<p class="eyebrow"><b>§</b> Documentation</p>
+<h1>Move a site off Framer: exact copy, source, machine-verified.</h1>
+<p class="lead">The full reference lives in the <a href="https://github.com/getbananalabs/BananaLabs/tree/main/plugins/bananamigrator">README on GitHub</a>. This page is the short version.</p>
+
+<section>
+  <p class="label"><b>01</b> What it does</p>
+  <p>BananaMigrator. is a command line tool and a Claude Code plugin. It moves a website off Framer onto your own hosting: it pulls an exact copy of the published site, extracts the project source through the Framer Server API, and verifies by machine that the copy is 1:1 with the original. No eyeballing: a machine makes the call.</p>
+</section>
+
+<section>
+  <p class="label"><b>02</b> Install</p>
+  <p>Add the Banana Labs marketplace, then install the plugin.</p>
+<pre><code><span class="p">$</span> claude plugin marketplace add getbananalabs/BananaLabs
+<span class="p">$</span> claude plugin install bananamigrator@bananalabs</code></pre>
+</section>
+
+<section>
+  <p class="label"><b>03</b> How a site travels</p>
+  <div class="grid">
+    <div class="cell"><p class="label"><b>01</b> Copy</p><p>Pulls an exact copy of the published site.</p></div>
+    <div class="cell"><p class="label"><b>02</b> Source</p><p>Extracts the project source through the Framer Server API.</p></div>
+    <div class="cell"><p class="label"><b>03</b> Verify</p><p>13 checks at 3 screen widths, plus real form flows.</p></div>
+    <div class="cell"><p class="label"><b>04</b> Report</p><p>Snapshots and change reports, so every run is on record.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="label"><b>04</b> Commands</p>
+  <p class="secondary">Inside Claude Code, ask for a migration in plain words and the plugin runs the steps for you. On the command line, every command takes the site name from <code>sites/&lt;site&gt;.json</code>.</p>
+  <table class="cmd">
+    <tr><td>pnpm mirror &lt;site&gt;</td><td>exact copy of the published site; <code>--refresh</code> downloads everything again, <code>--no-discover</code> skips the runtime pass</td></tr>
+    <tr><td>pnpm serve &lt;site&gt;</td><td>local preview of the copy; forms get 200 without sending anything</td></tr>
+    <tr><td>pnpm verify &lt;site&gt;</td><td>13 checks and flows; <code>--copy</code>, <code>--original</code>, <code>--pages</code>, <code>--viewports</code>, <code>--resolve host=ip</code>, <code>--flows [names]</code>, <code>--flows-only</code></td></tr>
+    <tr><td>pnpm dump &lt;site&gt;</td><td>the project source through the Server API, page texts completed from the mirror</td></tr>
+    <tr><td>pnpm export &lt;site&gt; --to &lt;dir&gt;</td><td>hand the copy to the target site's repository</td></tr>
+    <tr><td>pnpm pull &lt;site&gt;</td><td>mirror and dump in one go; <code>--snapshot [--push]</code> adds a snapshot</td></tr>
+    <tr><td>pnpm snapshot &lt;site&gt;</td><td>the site as of now; <code>--push</code> uploads it to your S3 or R2 storage</td></tr>
+    <tr><td>pnpm snapshots &lt;site&gt;</td><td>list the snapshots</td></tr>
+    <tr><td>pnpm diff &lt;site&gt; [a] [b]</td><td>what changed: pages, files, texts, CMS, code, styles, redirects</td></tr>
+    <tr><td>bananamigrator --version</td><td>the tool version, for support requests</td></tr>
+  </table>
+  <p class="secondary">Output lands in <code>out/&lt;site&gt;/</code>: <code>mirror/</code>, <code>dump/</code>, <code>verify/report.json</code>, <code>snapshots/</code>.</p>
+</section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">Banana Labs<span class="dot">.</span></span>
+    <a class="repo" href="https://github.com/getbananalabs">github.com/getbananalabs</a>
+  </div>
+</footer>
+</body>
+</html>
