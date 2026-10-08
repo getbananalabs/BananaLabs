@@ -1,0 +1,19 @@
+{
+  "name": "bananamigrator",
+  "description": "Move a site off Framer onto your own hosting: an exact copy, the project source, 13 checks that the copy matches the original, form flows, snapshots and change reports.",
+  "author": {
+    "name": "Banana Labs",
+    "url": "https://github.com/getbananalabs"
+  },
+  "homepage": "https://github.com/getbananalabs/BananaMigrator#readme",
+  "repository": "https://github.com/getbananalabs/BananaMigrator",
+  "keywords": [
+    "framer",
+    "migration",
+    "mirror",
+    "verify",
+    "playwright",
+    "snapshot",
+    "r2"
+  ]
+}
