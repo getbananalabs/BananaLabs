@@ -65,6 +65,13 @@ on under **Marketplaces** in `/plugin`, or run
 `claude plugin update bananamigrator@bananalabs` when you want the latest
 version.
 
+## Documentation, support, privacy, terms
+
+- [BananaMigrator. documentation](docs/bananamigrator.md)
+- Support: https://helpdesk.twogether.one/submit
+- [Privacy policy](docs/privacy.md)
+- [Terms of service](docs/terms.md)
+
 ## License
 
 MIT. See `LICENSE`.

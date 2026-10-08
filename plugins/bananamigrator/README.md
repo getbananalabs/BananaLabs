@@ -60,6 +60,14 @@ claude plugin install bananamigrator@bananalabs
                             code, CMS, styles, node tree
 ```
 
+## Documentation and support
+
+The user guide is at
+https://github.com/getbananalabs/BananaLabs/blob/main/docs/bananamigrator.md.
+Report a problem or ask a question at https://helpdesk.twogether.one/submit.
+The [privacy policy](../../docs/privacy.md) and the
+[terms of service](../../docs/terms.md) are short and in plain language.
+
 ## The tool
 
 The skill drives the BananaMigrator. command line tool, which lives in its own

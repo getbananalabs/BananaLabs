@@ -17,5 +17,9 @@
     "playwright",
     "snapshot",
     "r2"
-  ]
+  ],
+  "documentationUrl": "https://github.com/getbananalabs/BananaLabs/blob/main/docs/bananamigrator.md",
+  "supportUrl": "https://helpdesk.twogether.one/submit",
+  "privacyPolicyUrl": "https://github.com/getbananalabs/BananaLabs/blob/main/docs/privacy.md",
+  "termsOfServiceUrl": "https://github.com/getbananalabs/BananaLabs/blob/main/docs/terms.md"
 }
